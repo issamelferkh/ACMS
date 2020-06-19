@@ -5,7 +5,7 @@
 	if(isset($_GET["token"]) && ($_SESSION["token"] === $_GET["token"])) {
 		$_SESSION = array(); // Unset all session variables.
 		session_destroy(); // Destroys all data registered to a session
-		ft_putmsg('primary','Thanks for using Matcha!','/home.php');
+		ft_putmsg('primary','Thanks for using Matcha!','/signin.php');
 	} else {
 		header("location:404.php");
 	}

@@ -24,7 +24,7 @@ if(isset($_POST["signin"])) {
             $_SESSION['token']=hash('whirlpool', (rand(0,1000)));
             $_SESSION['auth'] = $la_case[0];
 
-            ft_putmsg('info','Welcome.','/user/index.php');
+            ft_putmsg('info','Welcome.','/user/visitor_add.php');
         } else {
             echo $username.$password;
             ft_putmsg('danger','Incorrect Username or Password!','/signin.php');

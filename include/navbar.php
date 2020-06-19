@@ -7,13 +7,15 @@ if (isset($_SESSION['username']))  { ?>
     </button>
 
     <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo $url; ?>/user/visitor_add.php">أضف زائر</a>
+                <a class="nav-link" href="<?php echo $url; ?>/user/visitor_add.php">-أضف زائر-</a>
             </li>
-        </ul>
-    
-        <a href="<?php echo $url; ?>/signout.php?token=<?php echo $_SESSION['token']; ?>" class="btn btn-outline-danger my-2 my-sm-0" role="button">Sign Out</a>
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo $url; ?>/user/visitor_list.php">-عرض جميع الزوار-</a>
+            </li>
+        </ul>    
+        <a href="<?php echo $url; ?>/signout.php?token=<?php echo $_SESSION['token']; ?>" class="btn btn-outline-danger my-2 my-sm-0" role="button">تسجيل الخروج</a>
     </div>
 </nav>
 
