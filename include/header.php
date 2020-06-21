@@ -26,5 +26,21 @@
         
         <!-- AJAX -->
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+        <!-- Data Tables -->
+        <link rel="stylesheet" type="text/css" href="<?php echo $url; ?>/assets/DataTables/datatables.min.css"/>
+        <script type="text/javascript" src="<?php echo $url; ?>/assets/DataTables/datatables.min.js"></script>
+        
+
+    <link rel="stylesheet" type="text/css" href="<?php echo $url; ?>/assets/DataTables/DataTables-1.10.21/css/dataTables.bootstrap4.min.css"/>
+
+        <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css"> -->
+
+
+        
+
+
+        
+
     </head>
     <body class="bg-light">
