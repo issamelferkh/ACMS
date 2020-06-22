@@ -9,7 +9,6 @@ $(document).ready(function() {
     $('#example').DataTable();
 } );
 </script>
-
 <main role="main" class="container">   
 	<?php include("../include/title.php"); ?>  
     <div class="my-1 p-1 bg-white rounded box-shadow">
@@ -49,15 +48,7 @@ $(document).ready(function() {
     }
 ?>      
                                 </tbody>
-                                <tfoot class="thead-light">
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Position</th>
-                                        <th>Office</th>
-                                        <th>Age</th>
-                                        <th>Start date</th>
-                                    </tr>
-                                </tfoot>
+                                
                             </table>                   
                     </div>
                 </div>
