@@ -22,13 +22,6 @@ if(isset($_POST['visitor_add']) && $_POST['visitor_add'] == "mMUh9mKhJqPs19aE8JY
 }
 ?>
 
-<!-- php show profile selected -->
-<?php
-	$query = 'SELECT * FROM `user` WHERE `user_id`="'.$_SESSION['user_id'].'"';
-	$query = $db->prepare($query);
-	$query->execute();
-	$la_case = $query->fetchAll(\PDO::FETCH_ASSOC);
-?>
 <?php include("../include/header.php"); ?>   
 <?php include("../include/navbar.php"); ?>
 <main role="main" class="container">   

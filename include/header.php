@@ -10,10 +10,10 @@
 
         <title>نظام إدارة  صلاحية الدخول</title>
 
-        <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/offcanvas/">
+        <!-- <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/offcanvas/"> -->
 
         <!-- font awesome icons -->
-        <script src="https://kit.fontawesome.com/e82fad5226.js" crossorigin="anonymous"></script>
+        <!-- <script src="https://kit.fontawesome.com/e82fad5226.js" crossorigin="anonymous"></script> -->
 
         <!-- Bootstrap core CSS -->
         <link href="<?php echo $url; ?>/assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
@@ -22,10 +22,10 @@
         <link href="<?php echo $url; ?>/assets/css/bootstrap/offcanvas.css" rel="stylesheet">
 
         <!-- JQuery -->
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
         
         <!-- AJAX -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script> -->
 
         <!-- Data Tables -->
         <link rel="stylesheet" type="text/css" href="<?php echo $url; ?>/assets/DataTables/datatables.min.css"/>
