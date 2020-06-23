@@ -21,6 +21,7 @@
 ## Issues 
 - prob: table not responsive
 - prob: fontawsome CDN -> web app courd
+
 ## already done
 - visitor_update in new page.
 - visitor_obserfation interface.
