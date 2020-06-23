@@ -33,6 +33,7 @@ if(isset($_POST['visitor_add']) && $_POST['visitor_add'] == "mMUh9mKhJqPs19aE8JY
 		$issam->execute();
 		$count = $issam->rowCount();
 		$la_case = $issam->fetchAll(\PDO::FETCH_ASSOC);
+		$count > 0 ? $visitor_id = $la_case[0]['visitor_id'] : $visitor_id=0;
 		$count > 0 ? $cin = $la_case[0]['cin'] : $cin = "لا يوجد";
 		$count > 0 ? $fname = $la_case[0]['fname'] : $fname = "لا يوجد";
 		$count > 0 ? $lname = $la_case[0]['lname'] : $lname = "لا يوجد";
@@ -42,7 +43,10 @@ if(isset($_POST['visitor_add']) && $_POST['visitor_add'] == "mMUh9mKhJqPs19aE8JY
 
 	?>
 	<!-- end test -->
+	<!-- delete visitor -->
+	<!--end delete the visitor  -->
 
+    
     <div class="my-3 p-3 bg-white rounded box-shadow">
         <div class="row">
             <div class="col-md-12">
@@ -77,10 +81,18 @@ if(isset($_POST['visitor_add']) && $_POST['visitor_add'] == "mMUh9mKhJqPs19aE8JY
 							</div>
 						</div>
 					</div>						
-					<a href="" class="btn btn-primary">تعديل زائر</a>
+					<a href="" class="btn btn-success">إضافة ملاحظة</a>
+					<a href="visitor_update.php" class="btn btn-warning">تعديل زائر</a>
+					<a href="visitor_delete.php?visitor_id=<?= $visitor_id;?>" name="visitor_delete" class="btn btn-danger" onclick="deleteConfirmation()">إزالة زائر</a>
+					
 			    </div>
             </div>
         </div>
     </div>
 </main>
+<script>
+	function deleteConfirmation() {
+		confirm("wach bessaè baghi t delete");
+	}
+</script>
 <?php include("../include/footer.php"); ?>
