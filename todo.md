@@ -2,19 +2,11 @@
 
 ## General
 - [x] Gestion des Roles
-- [ ] delete token
-- to translate:
-    - msgs: 
-        - Thanks for using Matcha!: in logout
-        - Welcome: in sign in
-        - All fields are required.: in  add user
-        - wach bessaè baghi t delete: in delete visitor
-    - data tables:
-
-- clean database
-    - tables needed:
-        - user
-        - visitor
+- [x] Securise contre XSS
+- [x] Securise contre SQLi
+- [x] Securise contre CSRF
+- [ ] Evite URL manipulation
+- [x] Data Table local pour evite la lent de l'App
 
 ## Admin Role
 - [x] Ajouter visiteur.
@@ -28,12 +20,19 @@
 - [x] La possibilite d'ajouter une observation a toutes les visiteurs.
 - [x] Afficher toutes les observation avec le nom de l'ajouteur et la date d'ajout sur la page de detail de visiteur.
 
-
 ## Div Role
-- Add observation from this div
+- [ ] lister tous les visiteurs.
+    - [ ] Install DataTables sur List page.
+    - [ ] Ajouter des lines pour allez au details de chaque visiteur.
+- [ ] Detail visiteur.
+- [ ] La possibilite d'ajouter une observation a toutes les visiteurs de cette division.
+- [ ] Afficher les observation de cette division avec le nom de l'ajouteur et la date d'ajout sur la page de detail de visiteur.
 
 ## User Role
-- Add visitor: confirmation msg after add a new visitor
+- [ ] Ajouter visiteur.
+    - [ ] Ajouter un msg de confirmation pour evite le besoin de le supprimer apres.
+- [ ] lister tous les visiteurs.
+    - [ ] Install DataTables sur List page.
 
 ## Issues 
 - prob: table not responsive
@@ -44,5 +43,20 @@
 - Issue Navbar is not responsive
 
 ## Todo
+- Add msg in singin welcome username
+- Add username and role in navbar
 - Add CIN de visiteur
 - Clean Code
+- Delete token
+- to translate:
+    - msgs: 
+        - Thanks for using Matcha!: in logout
+        - Welcome: in sign in
+        - All fields are required.: in  add user
+        - wach bessaè baghi t delete: in delete visitor
+    - data tables:
+
+- clean database
+    - tables needed:
+        - user
+        - visitor
