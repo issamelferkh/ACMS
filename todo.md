@@ -5,8 +5,10 @@
 - [x] Securise contre XSS
 - [x] Securise contre SQLi
 - [x] Securise contre CSRF
-- [ ] Evite URL manipulation
+- [x] Evite URL manipulation
 - [x] Data Table local pour evite la lent de l'App
+- [x] Clean DB
+- Add div usernames
 
 ## Admin Role
 - [x] Ajouter visiteur.
@@ -21,18 +23,18 @@
 - [x] Afficher toutes les observation avec le nom de l'ajouteur et la date d'ajout sur la page de detail de visiteur.
 
 ## Div Role
-- [ ] lister tous les visiteurs.
-    - [ ] Install DataTables sur List page.
-    - [ ] Ajouter des lines pour allez au details de chaque visiteur.
-- [ ] Detail visiteur.
-- [ ] La possibilite d'ajouter une observation a toutes les visiteurs de cette division.
-- [ ] Afficher les observation de cette division avec le nom de l'ajouteur et la date d'ajout sur la page de detail de visiteur.
+- [x] lister tous les visiteurs.
+    - [x] Install DataTables sur List page.
+    - [x] Ajouter des lines pour allez au details de chaque visiteur.
+- [x] Detail visiteur.
+- [x] La possibilite d'ajouter une observation a toutes les visiteurs de cette division.
+- [x] Afficher les observation de cette division avec le nom de l'ajouteur et la date d'ajout sur la page de detail de visiteur.
 
 ## User Role
-- [ ] Ajouter visiteur.
-    - [ ] Ajouter un msg de confirmation pour evite le besoin de le supprimer apres.
-- [ ] lister tous les visiteurs.
-    - [ ] Install DataTables sur List page.
+- [x] Ajouter visiteur.
+    - [x] Ajouter un msg de confirmation pour evite le besoin de le supprimer apres.
+- [x] lister tous les visiteurs.
+    - [x] Install DataTables sur List page.
 
 ## Issues 
 - prob: table not responsive
@@ -54,9 +56,12 @@
         - Welcome: in sign in
         - All fields are required.: in  add user
         - wach bessaè baghi t delete: in delete visitor
+        - Incorrect Username or Password!
     - data tables:
 
 - clean database
     - tables needed:
         - user
         - visitor
+
+- url manipulation: switch between roles +++

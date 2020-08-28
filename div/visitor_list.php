@@ -28,7 +28,7 @@ $(document).ready(function() {
                             </thead>
                             <tbody>
 <?php
-    $query1 = " SELECT * FROM `visitor` ";
+    $query1 = 'SELECT * FROM `visitor` WHERE `service` = "'.$_SESSION['username'].'"';
     $query1 = $db->prepare($query1);
     $query1->execute();
     $count1 = $query1->rowCount();

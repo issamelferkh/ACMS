@@ -1,5 +1,22 @@
 <?php
-if (isset($_SESSION['username']))  { ?>  
+if (isset($_SESSION['username']) && $_SESSION['role'] == "div")  { ?>  
+<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+    <a class="navbar-brand" href="<?php echo $url; ?>/<?= $_SESSION['role']; ?>/index.php">ACMS</a>
+    <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo $url; ?>/<?= $_SESSION['role']; ?>/visitor_list.php">-عرض جميع الزوار-</a>
+            </li>
+        </ul>    
+        <a href="<?php echo $url; ?>/signout.php?token=<?php echo $_SESSION['token']; ?>" class="btn btn-outline-danger my-2 my-sm-0" role="button">تسجيل الخروج</a>
+    </div>
+</nav>
+<?php }
+elseif (isset($_SESSION['username']) && $_SESSION['role'] != "div") { ?>
 <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
     <a class="navbar-brand" href="<?php echo $url; ?>/<?= $_SESSION['role']; ?>/index.php">ACMS</a>
     <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">

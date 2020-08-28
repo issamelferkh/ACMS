@@ -99,8 +99,6 @@
 						</div>
 					</div>						
 					<a href="visitor_observation.php?visitor_id=<?= $visitor_id;?>" class="btn btn-success">إضافة ملاحظة</a>
-					<a href="visitor_update.php?visitor_id=<?= $visitor_id;?>" class="btn btn-warning">تعديل زائر</a>
-					<a href="visitor_delete.php?visitor_id=<?= $visitor_id;?>" name="visitor_delete" class="btn btn-danger" onclick="return deleteConfirmation()">إزالة زائر</a>	
 				</div>
             </div>
             <div class="col-md-12">
