@@ -26,7 +26,7 @@
 - [x] Supprimer visiteur avec msg de confirmation.
 - [x] Modifier visiteur.
 - [x] La possibilite d'ajouter une observation a toutes les visiteurs.
-- [ ] Afficher toutes les observation avec le nom de l'ajouteur et la date d'ajout sur la page de detail de visiteur.
+- [x] Afficher toutes les observation avec le nom de l'ajouteur et la date d'ajout sur la page de detail de visiteur.
 
 
 ## Div Role
@@ -42,6 +42,7 @@
 - Issue in Update: look at the web page
 - Add observation: not yet
 - Issue Navbar is not responsive
+
 ## Todo
 - Add CIN de visiteur
 - Clean Code

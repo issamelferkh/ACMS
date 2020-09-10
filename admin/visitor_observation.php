@@ -48,6 +48,7 @@ if(isset($_POST['obs_add'])){
 					</form>				
 			    </div>
             </div>
+			
         </div>
     </div>
 </main>
