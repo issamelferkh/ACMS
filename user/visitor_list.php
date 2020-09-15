@@ -37,7 +37,7 @@ $(document).ready(function() {
     while ($count1 > $i) {
             echo "
                                     <tr>
-                                        <td><a href='visitor_detail.php?visitor_id=".$la_case[$i]['visitor_id']."'>".$la_case[$i]['cin']."</a></td>
+ <td><a href='visitor_detail.php?visitor_id=".$la_case[$i]['visitor_id']."'>".$la_case[$i]['cin']."</a></td>
                                         <td>".$la_case[$i]['fname']."</td>
                                         <td>".$la_case[$i]['lname']."</td>
                                         <td>".$la_case[$i]['service']."</td>

@@ -76,7 +76,7 @@ if(isset($_POST['visitor_add']) && $_POST['visitor_add'] == "mMUh9mKhJqPs19aE8JY
 				                </div>
 				            </div>
 				        </div>						
-				        <button name="visitor_add" value="mMUh9mKhJqPs19aE8JYT" type="submit" class="btn btn-primary">أضف زائر</button>
+				        <button name="visitor_add" type="submit" class="btn btn-primary">أضف زائر</button>
 			        </form>
 			    </div>
             </div>

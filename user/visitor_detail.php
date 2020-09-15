@@ -26,7 +26,7 @@ if(isset($_POST['visitor_add']) && $_POST['visitor_add'] == "mMUh9mKhJqPs19aE8JY
 <?php include("../include/navbar.php"); ?>
 <main role="main" class="container">   
 	<?php include("../include/title.php"); ?>
-	<!-- start test -->
+	
 	<?php
 		$sql  = "SELECT * FROM `visitor` WHERE visitor_id = ".$_GET['visitor_id'];
 		$issam = $db->prepare($sql);
@@ -42,6 +42,23 @@ if(isset($_POST['visitor_add']) && $_POST['visitor_add'] == "mMUh9mKhJqPs19aE8JY
 		$count > 0 ? $subject = $la_case[0]['subject'] : $subject = "لا يوجد";
 
 	?>
+	<!-- start test -->
+	<?php 
+			$sql = "SELECT * FROM `observation` WHERE `visitor_id` like ".$_GET['visitor_id']."";
+			$result = $db->query($sql);
+			$result->fetch();
+			while($row = $result) {
+				echo " 
+				
+				<div class='form-group col-md-6'>
+					<label>إظافة ملاحضة حول الزائر</label>
+					<textarea class='form-control' name='observation' row='10' cols='100' ></textarea>
+			    </div>
+			
+			";
+			}
+			?>
+
 	<!-- end test -->
 	<!-- delete visitor -->
 	<!--end delete the visitor  -->
@@ -81,8 +98,8 @@ if(isset($_POST['visitor_add']) && $_POST['visitor_add'] == "mMUh9mKhJqPs19aE8JY
 							</div>
 						</div>
 					</div>						
-					<a href="" class="btn btn-success">إضافة ملاحظة</a>
-					<a href="visitor_update.php" class="btn btn-warning">تعديل زائر</a>
+					<a href="visitor_observation.php" class="btn btn-success">إضافة ملاحظة</a>
+					<a href="visitor_update.php?visitor_id=<?= $visitor_id;?>" class="btn btn-warning">تعديل زائر</a>
 					<a href="visitor_delete.php?visitor_id=<?= $visitor_id;?>" name="visitor_delete" class="btn btn-danger" onclick="deleteConfirmation()">إزالة زائر</a>
 					
 			    </div>

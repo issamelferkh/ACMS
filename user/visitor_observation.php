@@ -5,9 +5,20 @@
 <?php include("../include/navbar.php"); ?>   
 <?php include("../include/title.php"); ?>
 
+<?php
+if(isset($_POST['visitor_observation'])){
+	if(empty($_POST['obseravation'])){
+		ft_putmsg('danger','voulez vous enregistrer ce champs.','/user/visitor_observation.php');
+	}else{
+		$observation = htmlspecialchars(trim($_POST["observation"]));
 
-
-
+		$query = 'INSERT INTO `observation` (`content`) VALUES (?)';
+        $query = $db->prepare($query);
+        $query->execute([$observation]);
+        ft_putmsg('success','تمت إضافة الملاحضة بنجاح','/user/visitor_observation.php');
+	}
+}
+?>
 
 
 
@@ -24,11 +35,11 @@
 						
 							<div class="form-group col-md-6">
 								<label>إظافة ملاحضة حول الزائر</label>
-								<textarea class="form-control" name="subject" row="10" cols="100" ></textarea>"
+								<textarea class="form-control" name="observation" row="10" cols="100" ></textarea>"
 							</div>
 						</div>
 					</div>						
-					<a href="visitor_detail.php" class="btn btn-success" name="visitor_update"> تأكيد</a>
+					<a href="visitor_detail.php" class="btn btn-success" name="visitor_observation"> تأكيد</a>
 										
 			    </div>
             </div>
