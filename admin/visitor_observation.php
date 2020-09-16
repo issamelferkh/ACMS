@@ -10,11 +10,14 @@ if(isset($_POST['obs_add'])){
 	if(empty($_POST['obs_content'])){
 		ft_putmsg('danger','رجاءا اكمل جميع الحقول.','/'.$_SESSION['role'].'/visitor_observation.php');
 	}else{
+		$visitor_id = htmlspecialchars(trim($_POST["visitor_id"]));
+		$user_id = htmlspecialchars(trim($_POST["user_id"]));
 		$obs_content = htmlspecialchars(trim($_POST["obs_content"]));
+		$username = htmlspecialchars(trim($_POST["username"]));
 
-		$query = 'INSERT INTO `observation` (`obs_content`) VALUES (?)';
+		$query = 'INSERT INTO `observation` (`visitor_id`,`user_id`,`obs_content`,`username`) VALUES (?,?,?,?)';
         $query = $db->prepare($query);
-        $query->execute([$obs_content]);
+        $query->execute([$visitor_id, $user_id, $obs_content, $username]);
         ft_putmsg('success','تمت إضافة الملاحضة بنجاح','/'.$_SESSION['role'].'/visitor_detail.php?visitor_id='.$_POST["visitor_id"].'');
 	}
 }
@@ -29,6 +32,7 @@ if(isset($_POST['obs_add'])){
 					<form method="POST" action="">
 						<input type="hidden" name="visitor_id" value="<?= $_GET['visitor_id'];?>">
 						<input type="hidden" name="user_id" value="<?= $_SESSION['user_id'];?>">
+						<input type="hidden" name="username" value="<?= $_SESSION['username'];?>">
 
 
 						<div class="media text-muted pt-3">

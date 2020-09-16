@@ -25,7 +25,9 @@
 - [x] Detail visiteur.
 - [x] Supprimer visiteur avec msg de confirmation.
 - [x] Modifier visiteur.
-- [ ] La possibilite d'ajouter une observation a toutes to visitor depuis toutes les divisions.
+- [x] La possibilite d'ajouter une observation a toutes les visiteurs.
+- [ ] Afficher toutes les observation avec le nom de l'ajouteur et la date d'ajout sur la page de detail de visiteur.
+
 
 ## Div Role
 - Add observation from this div
