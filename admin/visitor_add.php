@@ -3,9 +3,8 @@
 <?php require_once("../include/libft.php"); ?>
 <?php
 if(isset($_POST['visitor_add']) && $_POST['visitor_add'] == "mMUh9mKhJqPs19aE8JYT") {
-    if(empty($_POST["fname"]) || empty($_POST["lname"]) || empty($_POST["cin"]) || empty($_POST["service"]) || empty($_POST["address"]) 
-    || empty($_POST["subject"]) ) {
-        ft_putmsg('danger','All fields are required.','/user/visitor_add.php');
+    if( empty($_POST["fname"]) || empty($_POST["lname"]) || empty($_POST["cin"]) || empty($_POST["service"]) ) {
+        ft_putmsg('danger','All fields are required.','/'.$_SESSION['role'].'/visitor_add.php');
     } else {
         $fname = htmlspecialchars(trim($_POST["fname"]));
         $lname = htmlspecialchars(trim($_POST["lname"]));
@@ -17,7 +16,7 @@ if(isset($_POST['visitor_add']) && $_POST['visitor_add'] == "mMUh9mKhJqPs19aE8JY
         $query = 'INSERT INTO `visitor` (`fname`,`lname`,`cin`, `service`, `address`, `subject`) VALUES (?,?,?,?,?,?)';
         $query = $db->prepare($query);
         $query->execute([$fname,$lname,$cin,$service,$address,$subject]);
-        ft_putmsg('success','تمت إضافة الزائر الجديد بنجاح','/user/visitor_add.php');
+        ft_putmsg('success','تمت إضافة الزائر الجديد بنجاح','/'.$_SESSION['role'].'/visitor_add.php');
     }
 }
 ?>
@@ -40,15 +39,15 @@ if(isset($_POST['visitor_add']) && $_POST['visitor_add'] == "mMUh9mKhJqPs19aE8JY
 				                </div>
 				                <div class="form-group col-md-3">
 			                	    <label>الاسم الشخصي</label>
-				                    <input class="form-control" type="text" name="fname" required>
+				                    <input class="form-control" type="text" name="fname" >
 				                </div>
 				                <div class="form-group col-md-3">
 			                	    <label>الاسم العائلي</label>
-				                    <input class="form-control" type="text" name="lname" required>
+				                    <input class="form-control" type="text" name="lname" >
 				                </div>
                                 <div class="form-group col-md-3">
 			                	    <label>القسم او المصلحة</label>
-				                    <select class="form-control" name="service" required>
+				                    <select class="form-control" name="service" >
                                         <option  value="" >اختر القسم او المصلحة</option>
                                         <option  value="SG" >SG</option>
                                         <option  value="DAI" >DAI</option>
@@ -76,7 +75,7 @@ if(isset($_POST['visitor_add']) && $_POST['visitor_add'] == "mMUh9mKhJqPs19aE8JY
 				                </div>
 				            </div>
 				        </div>						
-				        <button name="visitor_add" type="submit" class="btn btn-primary">أضف زائر</button>
+				        <button name="visitor_add" type="submit" value="mMUh9mKhJqPs19aE8JYT" class="btn btn-primary">أضف زائر</button>
 			        </form>
 			    </div>
             </div>

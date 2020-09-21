@@ -9,10 +9,10 @@ if (isset($_SESSION['username']))  { ?>
     <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo $url; ?>/user/visitor_add.php">-أضف زائر-</a>
+                <a class="nav-link" href="<?php echo $url; ?>/<?= $_SESSION['role']; ?>/visitor_add.php">-أضف زائر-</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo $url; ?>/user/visitor_list.php">-عرض جميع الزوار-</a>
+                <a class="nav-link" href="<?php echo $url; ?>/<?= $_SESSION['role']; ?>/visitor_list.php">-عرض جميع الزوار-</a>
             </li>
         </ul>    
         <a href="<?php echo $url; ?>/signout.php?token=<?php echo $_SESSION['token']; ?>" class="btn btn-outline-danger my-2 my-sm-0" role="button">تسجيل الخروج</a>

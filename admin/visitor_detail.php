@@ -44,19 +44,19 @@ if(isset($_POST['visitor_add']) && $_POST['visitor_add'] == "mMUh9mKhJqPs19aE8JY
 	?>
 	<!-- start test -->
 	<?php 
-			$sql = "SELECT * FROM `observation` WHERE `visitor_id` like ".$_GET['visitor_id']."";
-			$result = $db->query($sql);
-			$result->fetch();
-			while($row = $result) {
-				echo " 
+			// $sql = "SELECT * FROM `observation` WHERE `visitor_id` like ".$_GET['visitor_id']."";
+			// $result = $db->query($sql);
+			// $result->fetch();
+			// while($row = $result) {
+			// 	echo " 
 				
-				<div class='form-group col-md-6'>
-					<label>إظافة ملاحضة حول الزائر</label>
-					<textarea class='form-control' name='observation' row='10' cols='100' ></textarea>
-			    </div>
+			// 	<div class='form-group col-md-6'>
+			// 		<label>إظافة ملاحضة حول الزائر</label>
+			// 		<textarea class='form-control' name='observation' row='10' cols='100' ></textarea>
+			//     </div>
 			
-			";
-			}
+			// ";
+			// }
 			?>
 
 	<!-- end test -->
@@ -100,7 +100,7 @@ if(isset($_POST['visitor_add']) && $_POST['visitor_add'] == "mMUh9mKhJqPs19aE8JY
 					</div>						
 					<a href="visitor_observation.php" class="btn btn-success">إضافة ملاحظة</a>
 					<a href="visitor_update.php?visitor_id=<?= $visitor_id;?>" class="btn btn-warning">تعديل زائر</a>
-					<a href="visitor_delete.php?visitor_id=<?= $visitor_id;?>" name="visitor_delete" class="btn btn-danger" onclick="deleteConfirmation()">إزالة زائر</a>
+					<a href="visitor_delete.php?visitor_id=<?= $visitor_id;?>" name="visitor_delete" class="btn btn-danger" onclick="return deleteConfirmation()">إزالة زائر</a>
 					
 			    </div>
             </div>
@@ -109,7 +109,15 @@ if(isset($_POST['visitor_add']) && $_POST['visitor_add'] == "mMUh9mKhJqPs19aE8JY
 </main>
 <script>
 	function deleteConfirmation() {
-		confirm("wach bessaè baghi t delete");
+		let res = confirm("wach bessaè baghi t delete");
+		if (res == true) {
+			console.log("Yes");
+		} else {
+			console.log("Nooo");
+		}
+		return res;
 	}
+
+
 </script>
 <?php include("../include/footer.php"); ?>

@@ -1,19 +1,27 @@
 # Todo
 
 ## General
-- update todo
-- data tables -> in arabe
+- [x] Gestion des Roles
+- [ ] delete token
+- to translate:
+    - msgs: 
+        - Thanks for using Matcha!: in logout
+        - Welcome: in sign in
+        - All fields are required.: in  add user
+        - wach bessaè baghi t delete: in delete visitor
+    - data tables:
+
 - clean database
-- msg translate in arabic
-    - Welcome
-- accounts management (Admin / Division / saisie)
+    - tables needed:
+        - user
+        - visitor
 
 ## Admin Role
-- [ ] Ajouter visiteur: avec msg de confirmation pour evite le besoin de le supprimer apres.
+- [x] Ajouter visiteur: avec msg de confirmation pour evite le besoin de le supprimer apres.
 - add CIN img: note required
 - Update visitor
-- Delete visitor
-- list visitors
+- [x] Supprimer visiteur avec msg de confirmation
+- [x] lister tous les visiteurs
 - detail visitor -> with CIN img and observations
 
 - add observation to visitor from any div

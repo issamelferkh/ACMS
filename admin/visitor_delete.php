@@ -6,6 +6,6 @@
         $sql = "DELETE FROM `visitor` WHERE `visitor_id`=".$_GET['visitor_id'];
         $sql = $db->prepare($sql);
         $sql->execute();
-        ft_putmsg('success','تمت إزالة الزائر بنجاح','/user/visitor_list.php');
+        ft_putmsg('success','تمت إزالة الزائر بنجاح','/'.$_SESSION['role'].'/visitor_list.php');
     }
 ?>
