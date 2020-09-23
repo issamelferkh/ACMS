@@ -2,24 +2,24 @@
 <?php require_once("../include/session.php"); ?>
 <?php require_once("../include/libft.php"); ?>
 <?php
-if(isset($_POST['visitor_add']) && $_POST['visitor_add'] == "mMUh9mKhJqPs19aE8JYT") {
-    if(empty($_POST["fname"]) || empty($_POST["lname"]) || empty($_POST["cin"]) || empty($_POST["service"]) || empty($_POST["address"]) 
-    || empty($_POST["subject"]) ) {
-        ft_putmsg('danger','All fields are required.','/user/visitor_add.php');
-    } else {
-        $fname = htmlspecialchars(trim($_POST["fname"]));
-        $lname = htmlspecialchars(trim($_POST["lname"]));
-        $cin = htmlspecialchars(trim($_POST["cin"]));
-        $service = htmlspecialchars(trim($_POST["service"]));
-        $address = htmlspecialchars(trim($_POST["address"])); 
-        $subject = htmlspecialchars(trim($_POST["subject"])); 
+// if(isset($_POST['visitor_add']) && $_POST['visitor_add'] == "mMUh9mKhJqPs19aE8JYT") {
+//     if(empty($_POST["fname"]) || empty($_POST["lname"]) || empty($_POST["cin"]) || empty($_POST["service"]) || empty($_POST["address"]) 
+//     || empty($_POST["subject"]) ) {
+//         ft_putmsg('danger','All fields are required.','/'.$_SESSION['role'].'/visitor_add.php');
+//     } else {
+//         $fname = htmlspecialchars(trim($_POST["fname"]));
+//         $lname = htmlspecialchars(trim($_POST["lname"]));
+//         $cin = htmlspecialchars(trim($_POST["cin"]));
+//         $service = htmlspecialchars(trim($_POST["service"]));
+//         $address = htmlspecialchars(trim($_POST["address"])); 
+//         $subject = htmlspecialchars(trim($_POST["subject"])); 
 
-        $query = 'INSERT INTO `visitor` (`fname`,`lname`,`cin`, `service`, `address`, `subject`) VALUES (?,?,?,?,?,?)';
-        $query = $db->prepare($query);
-        $query->execute([$fname,$lname,$cin,$service,$address,$subject]);
-        ft_putmsg('success','تمت إضافة الزائر الجديد بنجاح','/user/visitor_add.php');
-    }
-}
+//         $query = 'INSERT INTO `visitor` (`fname`,`lname`,`cin`, `service`, `address`, `subject`) VALUES (?,?,?,?,?,?)';
+//         $query = $db->prepare($query);
+//         $query->execute([$fname,$lname,$cin,$service,$address,$subject]);
+//         ft_putmsg('success','تمت إضافة الزائر الجديد بنجاح','/'.$_SESSION['role'].'/visitor_add.php');
+//     }
+// }
 ?>
 
 <?php include("../include/header.php"); ?>   
@@ -98,7 +98,7 @@ if(isset($_POST['visitor_add']) && $_POST['visitor_add'] == "mMUh9mKhJqPs19aE8JY
 							</div>
 						</div>
 					</div>						
-					<a href="visitor_observation.php" class="btn btn-success">إضافة ملاحظة</a>
+					<a href="visitor_observation.php?visitor_id=<?= $visitor_id;?>" class="btn btn-success">إضافة ملاحظة</a>
 					<a href="visitor_update.php?visitor_id=<?= $visitor_id;?>" class="btn btn-warning">تعديل زائر</a>
 					<a href="visitor_delete.php?visitor_id=<?= $visitor_id;?>" name="visitor_delete" class="btn btn-danger" onclick="return deleteConfirmation()">إزالة زائر</a>
 					

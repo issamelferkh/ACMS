@@ -6,23 +6,19 @@
 <?php include("../include/title.php"); ?>
 
 <?php
-if(isset($_POST['visitor_observation'])){
-	if(empty($_POST['obseravation'])){
-		ft_putmsg('danger','voulez vous enregistrer ce champs.','/user/visitor_observation.php');
+if(isset($_POST['obs_add'])){
+	if(empty($_POST['obs_content'])){
+		ft_putmsg('danger','رجاءا اكمل جميع الحقول.','/'.$_SESSION['role'].'/visitor_observation.php');
 	}else{
-		$observation = htmlspecialchars(trim($_POST["observation"]));
+		$obs_content = htmlspecialchars(trim($_POST["obs_content"]));
 
-		$query = 'INSERT INTO `observation` (`content`) VALUES (?)';
+		$query = 'INSERT INTO `observation` (`obs_content`) VALUES (?)';
         $query = $db->prepare($query);
-        $query->execute([$observation]);
-        ft_putmsg('success','تمت إضافة الملاحضة بنجاح','/user/visitor_observation.php');
+        $query->execute([$obs_content]);
+        ft_putmsg('success','تمت إضافة الملاحضة بنجاح','/'.$_SESSION['role'].'/visitor_detail.php?visitor_id='.$_POST["visitor_id"].'');
 	}
 }
 ?>
-
-
-
-
 
 <main role="main" class="container">    
     <div class="my-3 p-3 bg-white rounded box-shadow">
@@ -30,17 +26,22 @@ if(isset($_POST['visitor_observation'])){
             <div class="col-md-12">
 				<div class="my-3 p-3 bg-white rounded box-shadow">
                     <h6 class="border-bottom border-gray pb-2 mb-0">إظافة ملاحضة</h6>
-					<div class="media text-muted pt-3">
-						<div class="form-row">
-						
-							<div class="form-group col-md-6">
-								<label>إظافة ملاحضة حول الزائر</label>
-								<textarea class="form-control" name="observation" row="10" cols="100" ></textarea>"
+					<form method="POST" action="">
+						<input type="hidden" name="visitor_id" value="<?= $_GET['visitor_id'];?>">
+						<input type="hidden" name="user_id" value="<?= $_SESSION['user_id'];?>">
+
+
+						<div class="media text-muted pt-3">
+							<div class="form-row">
+							
+								<div class="form-group col-md-12">
+									<label>إظافة ملاحضة حول الزائر</label>
+									<textarea class="form-control" name="obs_content" row="10" cols="1000" ></textarea>
+								</div>
 							</div>
-						</div>
-					</div>						
-					<a href="visitor_detail.php" class="btn btn-success" name="visitor_observation"> تأكيد</a>
-										
+						</div>						
+						<button name="obs_add" type="submit" class="btn btn-primary">تأكيد</button>
+					</form>				
 			    </div>
             </div>
         </div>

@@ -4,7 +4,7 @@
 <?php
 if(isset($_POST['visitor_add']) && $_POST['visitor_add'] == "mMUh9mKhJqPs19aE8JYT") {
     if( empty($_POST["fname"]) || empty($_POST["lname"]) || empty($_POST["cin"]) || empty($_POST["service"]) ) {
-        ft_putmsg('danger','All fields are required.','/'.$_SESSION['role'].'/visitor_add.php');
+        ft_putmsg('danger','رجاءا اكمل جميع الحقول.','/'.$_SESSION['role'].'/visitor_add.php');
     } else {
         $fname = htmlspecialchars(trim($_POST["fname"]));
         $lname = htmlspecialchars(trim($_POST["lname"]));

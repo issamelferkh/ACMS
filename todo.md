@@ -17,21 +17,21 @@
         - visitor
 
 ## Admin Role
-- [x] Ajouter visiteur: avec msg de confirmation pour evite le besoin de le supprimer apres.
-- add CIN img: note required
-- Update visitor
-- [x] Supprimer visiteur avec msg de confirmation
-- [x] lister tous les visiteurs
-- detail visitor -> with CIN img and observations
-
-- add observation to visitor from any div
+- [x] Ajouter visiteur.
+    - [x] Ajouter un msg de confirmation pour evite le besoin de le supprimer apres.
+- [x] lister tous les visiteurs.
+    - [x] Install DataTables sur List page.
+    - [x] Ajouter des lines pour allez au details de chaque visiteur.
+- [x] Detail visiteur.
+- [x] Supprimer visiteur avec msg de confirmation.
+- [x] Modifier visiteur.
+- [ ] La possibilite d'ajouter une observation a toutes to visitor depuis toutes les divisions.
 
 ## Div Role
 - Add observation from this div
 
 ## User Role
 - Add visitor: confirmation msg after add a new visitor
-- add CIN img: note required
 
 ## Issues 
 - prob: table not responsive
@@ -40,3 +40,6 @@
 - Issue in Update: look at the web page
 - Add observation: not yet
 - Issue Navbar is not responsive
+## Todo
+- Add CIN de visiteur
+- Clean Code
